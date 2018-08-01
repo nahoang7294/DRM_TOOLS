@@ -1,0 +1,8 @@
+Lỗi khi thực hiện thay đổi môi trường:
+The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+Cách fix:
+Tiến hành chạy 3 lệnh:
+Php artisan key:generate -> Sau khi thực hiện lệnh này sẽ tiến hành copy key thay thế Key trong file env.
+Sau khi thực hiện bước này:
+Tiến hành chạy 2 bước: php artisan cache:clear  + php artisan config:cache.
+
