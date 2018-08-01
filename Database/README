@@ -1,0 +1,6 @@
+Đây là thu mục chứa các câu lệnh sql. 
+Khi tiến hành thêm mới hay add một thuộc tính, tạo trigger, store proceducer thì tiến
+hành lưu giữ ở đây.
+Ví dụ: Trung tạo môt bảng mới có tên User:
+Trung tiến hành tạo một file với name 20180801_tao_bang_user: Sau đó coppy nội dung câu sql tạo bảng vào đây. Để mọi người có thể lấy về sử dụng. Trong laravel thì có chức năng migrate, tuy nhiên về lâu dài nếu 
+custome lại bảng thì migrate khó đáp ứng được.
