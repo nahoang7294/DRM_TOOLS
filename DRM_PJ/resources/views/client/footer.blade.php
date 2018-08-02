@@ -18,8 +18,11 @@
      <!-- SCROLL ANIMATIONS  -->
     <script src="assets/js/scrollReveal.js"></script>
     <!-- CUSTOM SCRIPTS   -->
-    <script src="assets/js/custom.js"></script>
-
+    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <!-- Plugin validation by jquery -->
+    <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
+    <!-- VALIDATE SCRIPTS -->
+    <script src="{{asset('assets/js/form-validate.js')}}"></script>
 </body>
 </html>
 

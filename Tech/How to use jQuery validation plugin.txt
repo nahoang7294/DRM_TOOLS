@@ -1,0 +1,38 @@
+﻿I. Giới thiệu jQuery Validation plugin : 
+ Plugin jQuery này giúp xác thực tính hợp lệ của dữ liệu nhập vào biễu mẫu(Form) trong trang web một cách đơn giản.
+
+II. Cách thực hiện.
+ 1. Tạo form bằng html, các thẻ <input> thêm vào thuộc tính id và name.
+ 1. Tải plugin từ trang: https://github.com/jquery-validation/jquery-validation/releases/tag/1.17.0.
+ 2. Lấy file jquery.validate.min.js thêm vào project
+ 3.Tạo 1 file jquery mới và bắt sự kiện validate của form  mình muốn xác thực:
+ code vd: $().ready(function(){
+	$("#login-form").validate({
+		rules:{ //
+			email: { // 
+				maxlength:256,
+				required:true,
+				email: true,
+			},
+			password:{
+				required: true,
+				minlength: 6,
+				maxlength: 20
+			}
+		},
+		messages:{
+			email:{
+				maxlength: "Địa chỉ email quá dài",
+				required: "Xin vui lòng nhập địa chỉ email.",
+				email: "Xin hãy điền địa chỉ email hợp lệ."
+			},
+			password:{
+				required: "Xin hãy nhập mật khẩu",
+				minlength: "Mật khẩu có ít nhất 6 ký tự.",
+				maxlength: "Mật khẩu dài tối đa 20 ký tự."
+			}
+		}
+	});
+});
+
+tham khảo:https://jqueryvalidation.org/

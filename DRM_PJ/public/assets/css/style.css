@@ -227,3 +227,35 @@ footer {
         color: #000;
         text-decoration: none;
     }
+
+
+
+/* =============================================================
+  LOGIN FORM STYLES
+ ============================================================ */
+
+.control-label{
+    margin-top: 1rem;
+    margin-bottom: 5px!important;
+    font-size: 16px;
+}
+
+.glyphicon{
+    margin-right: 5px;
+}
+#remeberLogin{
+    margin-top: 10px;
+}
+#btn-login{
+    padding: 10px;
+    align-self: center;
+}
+
+#password-error{
+    color:#FF4500;
+    text-align: center;
+}
+#email-error{
+    color:#FF4500;
+    text-align: center;
+}
