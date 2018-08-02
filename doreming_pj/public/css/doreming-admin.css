@@ -1,0 +1,79 @@
+
+body{
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
+}
+/*admin page*/
+#navBrand{
+	width: 160px;
+	height: 35px;
+	margin-right: 20px;
+}
+
+#header{
+	margin: 0px;
+	padding:0px;
+}
+#header nav{
+	border-bottom: 2px solid #000000;
+}
+.content{
+	padding: 0px;
+	padding-right: 20px;
+	margin: 0px;
+	height: 100vh;
+}
+.sidebar{
+	padding:2px;
+	margin: 0px;
+	height: 100vh
+/*	background-color:#0d0d0d;*/
+}
+
+.sidebar-menu{
+	margin: 0px;
+	padding: 0px;
+}
+.sidebar-menu a{
+	text-decoration: none;
+	padding: 15px 30px 15px 30px;
+	color: #000000;
+	margin-top: 5px;
+}
+
+.table-title{
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+td{
+	text-align: center;
+}
+
+.text-align{
+	text-align: left;
+}
+
+/*login page*/
+
+.logo{
+	padding: 20px;
+	margin: 0px;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.logo img{
+	width: 30%;
+	height: 10%;
+}
+
+#id_card{
+	margin: 0px;
+	padding:0px;
+}
+#id_card i{
+	margin: 0px;
+	font-size: 170px;
+}

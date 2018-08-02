@@ -1,0 +1,52 @@
+body{
+	padding: 0px;
+}
+
+#navBrand{ // logo Doreming trong navbar
+	width: 160px;
+	height: 35px;
+	margin-right: 20px;
+}
+
+ // nút đăng nhập và đăng xuất trên navbar
+#btnLogin, #btnSignup{
+	color: #000000;
+}
+
+#btnLogin:hover, #btnSignup:hover{
+	cursor: pointer;
+	color:  #33ccff;
+}
+
+
+
+#content{ // phần nội dung trang homepage
+	padding-top: 100px;
+}
+
+
+
+
+#formTitle{
+	display: flex;
+	margin: 0px;
+	font-family: 'Roboto';
+	text-align: center;
+}
+#call{ // phần footer
+	margin: 0px;
+	padding-top: 15px;
+	padding:10px;
+}
+
+
+.customForm{ // form trong các modal chon file input
+	padding: 20px 20px 5px 20px;
+}
+
+#formBackground{
+	padding: 30px;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-bottom: 30px;
+}

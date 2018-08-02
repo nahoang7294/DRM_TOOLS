@@ -1,0 +1,70 @@
+#navBrand{
+	width: 160px;
+	height: 35px;
+	margin-right: 20px;
+}
+
+body{
+	padding: 0px;
+}
+
+#content{
+	margin-top: 100px;
+	padding: 0px;
+}
+#formatTable{
+	margin: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#column1, #column3{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.format-item{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.format-item:hover{
+	background-color:#DCDCDC;
+}
+
+.format-item-list{
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	height: 320px;
+	overflow-y: scroll;
+}
+
+#column2{
+	height: 320px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.btn-format:hover{
+	font-size: 22px;
+	color: #008000;
+	background-color: #ffffff;
+}
+
+#reviewBox{
+	margin-top: 30px;
+	margin-right: 0px;
+	margin-left: 0px; 
+	padding-top: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 30px;
+}
