@@ -23,6 +23,9 @@
     <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
     <!-- VALIDATE SCRIPTS -->
     <script src="{{asset('assets/js/form-validate.js')}}"></script>
+    {{-- LOGIN SCRIPTS --}}
+    <script src="{{asset('assets/js/login.js')}}"></script>
+</script>
 </body>
 </html>
 

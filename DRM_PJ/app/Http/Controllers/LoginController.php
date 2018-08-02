@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use Illuminate\Support\MessageBag;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -19,13 +20,21 @@ class LoginController extends Controller
     		'password' => $request->password
     	];
     	if (Auth::attempt($login)) {	
-            // Authentication passed...
-            return redirect()->route('/');
+    		return response()->json(
+    			[
+	                'error' => false,
+	                'message' => 'success'
+	            ], 200);
+            //return redirect()->route('/');
         }
         else{
-        	echo 'fail';
-        	die;
-        	return redirect()->back();
+        	$errors = new MessageBag(['errorlogin' => 'Email hoặc mật khẩu không đúng']);
+            return response()->json(
+            	[
+                'error' => true,
+                'message' => $errors
+                ], 200);
+        	// return redirect()->back();
         }
     }
 

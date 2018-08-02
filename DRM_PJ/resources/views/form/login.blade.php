@@ -23,6 +23,9 @@
                             <input type="password" name="password" class="form-control" id="password" 
                             placeholder="Mật khẩu" tabindex="2" required>
                         </div>
+                        <span class="text-danger">
+                                <strong id="password-error"></strong>
+                            </span>
                         
                     </div>
                     <div class="checkbox">
