@@ -14,13 +14,17 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-            		
-                    <li>  <a  data-toggle="modal" href='#login'>LOGIN</a></li>
-
-                    <li><a data-toggle="modal" href='#signin'>SIGN IN</a></li>
-
-                </ul>
+                @if (Auth::guest())
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>  <a  data-toggle="modal" href='#login'>LOGIN</a></li>
+                        <li> <a data-toggle="modal" href='#signin'>SIGN IN</a></li>
+                    </ul>   
+                @else
+                     <ul class="nav navbar-nav navbar-right">
+                        <li><a  data-toggle="modal">{{ Auth::user()->personal_in_charge }}</a></li>
+                        <li><a  data-toggle="modal" href='{!! url('logout') !!}'>LOG OUT</a></li>
+                    </ul>
+                @endif
             </div>
 
         </div>

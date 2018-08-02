@@ -7,11 +7,12 @@
                 <h2 class="modal-title">Đăng nhập</h2>
             </div>
             <div class="modal-body">
-                <form class="form-inline" id="login-form">
+                <form action="login" class="form-inline" id="login-form" method="post">
                     <div class="form-group">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <label class="control-label" for="email"><span class="glyphicon glyphicon-envelope"></span>Email<span class="text-danger">*</span></label>
                         <div >
-                            <input type="email" name="email" class="form-control" tabindex="1" 
+                            <input type="email" name="email" value="{{ old('name') }}" class="form-control" tabindex="1" 
                             id="email" placeholder="Email" required>
                         </div>
                     </div>

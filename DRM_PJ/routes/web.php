@@ -12,15 +12,11 @@ use App\SystemRole;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => '/', function () {
     return view('client.content');
-});
+}]);
 
+Route::get('login', 'LoginController@getLogin')->name('getLogin');
+Route::post('login', 'LoginController@postLogin')->name('postLogin');
+Route::get('logout', 'LoginController@getLogout')->name('getLogout');
 
-// Route::get('/', function(){
-//     $roles = SystemRole::all();
-//     foreach ($roles as $value) {
-//         echo($value->description.'<br>');
-//     }
-//     die;
-// });

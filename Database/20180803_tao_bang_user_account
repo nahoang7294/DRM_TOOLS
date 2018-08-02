@@ -18,3 +18,5 @@ ALTER TABLE `user_account`
   ALTER TABLE `user_account`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
   COMMIT;
+
+  ALTER TABLE `user_account` ADD `remember_token` VARCHAR(255) NOT NULL AFTER `update_datetime`;
