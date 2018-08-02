@@ -1,0 +1,11 @@
+CREATE TABLE `system_role` (
+  `id` int(1) NOT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+ALTER TABLE `system_role`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `system_role`
+    MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

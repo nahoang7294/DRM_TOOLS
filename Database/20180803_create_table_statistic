@@ -1,0 +1,13 @@
+CREATE TABLE `statistic` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `report_type` int(1) NOT NULL COMMENT 'Loại report [0: bảng chấm công 1: bảng lương 2: bảng ứng lương]',
+  `create_datetime` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  `update_datetime` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE `statistic`
+ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `statistic`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

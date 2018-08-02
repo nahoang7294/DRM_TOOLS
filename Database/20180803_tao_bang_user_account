@@ -1,0 +1,20 @@
+CREATE TABLE `user_account` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `personal_in_charge` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Người phụ trách',
+  `status` int(1) NOT NULL COMMENT '0: dùng thử, 1: hết hạn dùng thử, 2:chính thức, 3: chưa thanh toán (hết hạn chính thức)',
+  `phone_number` int(11) NOT NULL,
+  `company_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `company_address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `create_datetime` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  `exprired` date NOT NULL COMMENT 'Ngày hết hạn của tài khoản',
+  `update_datetime` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE `user_account`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `user_account`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  COMMIT;

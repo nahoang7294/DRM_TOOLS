@@ -1,5 +1,6 @@
 <?php
 
+use App\SystemRole;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,12 @@
 Route::get('/', function () {
     return view('client.content');
 });
+
+
+// Route::get('/', function(){
+//     $roles = SystemRole::all();
+//     foreach ($roles as $value) {
+//         echo($value->description.'<br>');
+//     }
+//     die;
+// });
