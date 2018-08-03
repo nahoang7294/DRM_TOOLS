@@ -29,7 +29,7 @@ class LoginController extends Controller
 	                'error' => false,
 	                'message' => 'success'
 	            ], 200);
-            //return redirect()->route('/');
+            // return redirect()->route('/');
         }
         else{
         	$errors = new MessageBag(['errorlogin' => 'Email hoặc mật khẩu không đúng']);

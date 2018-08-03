@@ -1,4 +1,4 @@
-<div class="modal fade" id="signin">
+<div class="modal fade" id="signup">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 	        <div class="modal-header">
@@ -41,7 +41,7 @@
 	            	<label for="email" class="control-label col-md-4 col-form-row text-right">Email
 	            	<span class="text-danger">*</span></label>
 	              	<div class="col-md-7">
-	                	<input type="email" placeholder="Email" class="form-control" id="email"
+	                	<input type="email" placeholder="Email" class="form-control" id="email-signup"
 	              		tabindex="5" required></input>
 	              	</div>
 	         	</div>
@@ -49,7 +49,7 @@
 	            	<label for="password" class="control-label col-md-4 col-form-row text-right">Mật khẩu
 	            	<span class="text-danger">*</span></label>
 	              	<div class="col-md-7">
-	                	<input type="password" placeholder="Mật khẩu" class="form-control" id="password"
+	                	<input type="password" placeholder="Mật khẩu" class="form-control" id="password-signup"
 	                	tabindex="6" required></input>
 	              	</div>
 	          	</div>
@@ -68,7 +68,7 @@
 	          	</div>
 	          	<div class="row form-group">
 	            	<div class="col-md-4 col-md-push-4">
-	              		<button type="submit" class="btn btn-primary btn-block" id="btn-login">Đăng ký ngay</button>
+	              		<button type="submit" class="btn btn-primary btn-block" id="btn-signup">Đăng ký ngay</button>
 	            	</div>
 	          	</div>
 	        </form>

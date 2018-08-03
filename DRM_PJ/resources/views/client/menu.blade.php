@@ -17,13 +17,13 @@
                 @if(Session::has('login') && Session::get('login') == true)
                     <ul class="nav navbar-nav navbar-right">
                         <li><a  data-toggle="modal">Xin chào {{ Session::get('name')}}</a></li>
-                        <li><a  data-toggle="modal" href='{!! url('logout') !!}'>LOG OUT</a></li>
+                        <li><a  data-toggle="modal" href='{!! url('logout') !!}'>LOGOUT</a></li>
                     </ul>
                       
                 @else
                     <ul class="nav navbar-nav navbar-right">
-                        <li>  <a  data-toggle="modal" href='#login'>LOGIN</a></li>
-                        <li> <a data-toggle="modal" href='#signin'>SIGN UP</a></li>
+                        <li>  <a  data-toggle="modal" href='#login-modal'>LOGIN</a></li>
+                        <li> <a data-toggle="modal" href='#signup'>SIGNUP</a></li>
                     </ul> 
                 @endif
             </div>

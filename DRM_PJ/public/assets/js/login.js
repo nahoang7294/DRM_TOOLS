@@ -1,20 +1,35 @@
-function login(){
 
-    var email=$('#email').val();
-    var password=$('#password').val();
-    alert(email);
-   
-    $.ajax({
-         "_token": $('#token').val(),
-        type: 'POST',   
-        url: 'login-account',
-        data:{
-            'email' :email,
-            'password' : password
-        },
-        success: function(data){
-            alert(123)
-            console.log(11111111111111)
-        }
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+$(document).ready(function(){
+    $( "#login-form" ).submit(function(e) {
+        e.preventDefault(); 
+        var email=$('#email').val();
+        var password=$('#password').val();
+
+        $.ajax({
+            type: 'post',
+            url: 'login',
+            data:{
+                "_token": "{{ csrf_token() }}",
+                "email" : email,
+                "password" : password
+                },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                if (data.error == true) {
+                    // alert(data.message.errorlogin[0]);
+                    $('.errorPassword').show().text(data.message.errorlogin[0]);
+                }
+                else{
+                    location.reload();  
+                }
+            },
+        });
     });
-}
+});

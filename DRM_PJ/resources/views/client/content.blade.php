@@ -1,6 +1,6 @@
 @extends('client.master')
 @include('form.login')
-@include('form.signin')
+@include('form.signup')
 @section('content')
     <div id="header">
         <div class="overlay">
