@@ -7,9 +7,9 @@
                 <h2 class="modal-title">Đăng nhập</h2>
             </div>
             <div class="modal-body">
-                <form action="login" class="form-inline" id="login-form" method="post">
+                <form action="login" method="post" role="form" class="form-inline" id="login-form">
                     <div class="form-group">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}">
                         <label class="control-label" for="email"><span class="glyphicon glyphicon-envelope"></span>Email<span class="text-danger">*</span></label>
                         <div >
                             <input type="email" name="email" value="{{ old('name') }}" class="form-control" tabindex="1" 
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="form-group ">       
-                        <button type="submit" class="btn btn-primary btn-block" tabindex="4" id="btn-login">
+                        <button onclick="return login()" class="btn btn-primary btn-block" tabindex="4" id="btn-login">
                         Đăng nhập</button>
                     </div>
                     <div class="form-group text-center">

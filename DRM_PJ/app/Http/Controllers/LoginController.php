@@ -5,13 +5,12 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use Illuminate\Support\MessageBag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
     public function getLogin(){
-    	if(!Auth::check()){
-	    	return view('client.content');    			
-    	}
+		return view('client.content');
     }
 
     public function postLogin(Request $request){
@@ -20,6 +19,11 @@ class LoginController extends Controller
     		'password' => $request->password
     	];
     	if (Auth::attempt($login)) {	
+
+	  		$request->session()->put('login', true);
+	  		$request->session()->put('name', Auth::user()->personal_in_charge);
+	        $request->session()->put('email', $request->email);
+	        $request->session()->put('user_id', Auth::user()->id);
     		return response()->json(
     			[
 	                'error' => false,
@@ -40,6 +44,7 @@ class LoginController extends Controller
 
     public function getLogout(){
     	if(Auth::check()){
+    		Session::flush();
     		Auth::logout();
     	}
     	return redirect()->route('/');
